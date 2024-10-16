@@ -1,5 +1,3 @@
-package m;
-
 
 public class Roll {
 	private int rollnum;
@@ -7,7 +5,7 @@ public class Roll {
 		rollnum = -1;
 	}
 	public int rollStave() {
-		rollnum = (int)Math.random()*2+35;
+		rollnum = (int)(Math.random()*2+35);
 		return rollnum;
 		
 	}

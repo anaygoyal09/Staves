@@ -1,4 +1,4 @@
-package m;
+
 import java.util.Scanner;
 //Stave.java	complete the heading!
 
@@ -23,8 +23,8 @@ private int roll1, roll2, roll3, roll4, score,runningScore;
 		roll2 = -1;
 		roll3 = -1;
 		roll4 = -1;
-		score = -1;
-		runningScore = -1;
+		score = 0;
+		runningScore = 0;
 		
 
 
@@ -52,16 +52,8 @@ private int roll1, roll2, roll3, roll4, score,runningScore;
 	{
 		int pause;
 		Scanner in = new Scanner(System.in);
-		System.out.print("Welcome to staves press enter to roll staves.");
+		System.out.print("To roll the Staves, press Enter.");
 		in.nextLine();
-		
-		
-
-
-
-
-
-
 		Roll rollem = new Roll();
 		ShowStave show = new ShowStave();
 		roll1 = rollem.rollStave(); 
@@ -80,35 +72,35 @@ private int roll1, roll2, roll3, roll4, score,runningScore;
 	
 /* This method is complete.  scoreGame() builds a String of all 4 rolls as characters, then looks at all 4 characters, counting how many '$' there are.  If four or no '$' score increases by 2.  If two '$' score increases by 1.*/
 	public void scoreGame() 
-	{ 
+	{	
+		score=0; 
 		String rolls = new String("");
 		rolls = "" + (char)roll1 + (char)roll2 + (char)roll3 + (char)roll4; 
 		int count = 0;
-		score = 0;		
 		for (int i = 0; i < 4; i++) 
 		{  
 			if (rolls.charAt(i) == '$')
 				count++;
+
 		} 
 		
 		if (count == 4 || count == 0) 
+		{
 			score+=2; 
+		}
 		else if (count == 2) 
+		{
 			score++; 
+		}
+
 	}
 	
 	public void updateScore () 
 	{
-		
-
-
-
-
-
-
-
-
-
+		runningScore+=score;
+		System.out.println("This round earned a score of : " + score);
+		System.out.println("Your total score is " + runningScore);
+		System.out.print("\n\n");
 	} 
 
 } // end class Stave
