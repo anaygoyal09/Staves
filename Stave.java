@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
-//Stave.java	complete the heading!
+//Stave.java	
+//Anay Goyal
+//10/16/24
 
 
 /// When you are done with the code, clean up any extra blank lines
@@ -34,11 +36,14 @@ private int roll1, roll2, roll3, roll4, score,runningScore;
 	{ 
 		Stave st = new Stave (); 
 		st.runGame();
+		
 	}
 	
 	public void runGame()
 	{
+		
 		System.out.println("\n\n");
+		System.out.printf("%7s%16s%8s\n", "","Welcome to Staves!", "");
 		for (int i = 0; i < 3; i++)	// this is a loop that runs 3 times, so it calls
 		{								// all three methods in order 3 times.
 			playGame();
